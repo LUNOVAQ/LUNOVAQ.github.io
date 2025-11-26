@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="บทความทั้งหมด - ก่อนชัตเตอร์สุดท้าย">
+    <meta name="author" content="ธีรเดช เดชสูงเนิน">
+    <title>บทความ | ก่อนชัตเตอร์สุดท้าย</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Mitr:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">📷</div>
+                <span>ก่อนชัตเตอร์สุดท้าย</span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav-link">หน้าแรก</a>
+                <a href="about.html" class="nav-link">เกี่ยวกับ</a>
+                <a href="blog.html" class="nav-link active">บทความ</a>
+                <a href="project.html" class="nav-link">โปรเจกต์</a>
+                <a href="contact.html" class="nav-link">ติดต่อ</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+            <h1 class="hero-title">บทความทั้งหมด</h1>
+            <p class="hero-description">
+                สปอย บันทึก และเบื้องหลังของโปรเจกต์
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section style="background: rgba(21, 27, 61, 0.3); padding: var(--spacing-lg) 0;">
+        <div class="container">
+            <div
+                style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap; align-items: center;">
+                <span style="color: var(--color-gray-medium);">กรองตามหมวดหมู่:</span>
+                <button class="tag filter-btn active" data-category="all">ทั้งหมด</button>
+                <button class="tag filter-btn" data-category="spoilers">✨ Spoilers</button>
+                <button class="tag filter-btn" data-category="diary">📝 Diary</button>
+                <button class="tag filter-btn" data-category="behind-the-scenes">🎬 Behind the Scenes</button>
+                <button class="tag filter-btn" data-category="equipment">📷 Equipment</button>
+                <button class="tag filter-btn" data-category="teacher-talks">💬 Teacher Talks</button>
+                <button class="tag filter-btn" data-category="video-project">🎥 Video Project</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="section-spacing">
+        <div class="container">
+            <div class="posts-grid" id="postsGrid">
+                <!-- Post 1 -->
+                <article class="card fade-in" data-category="spoilers">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800&h=500&fit=crop"
+                        alt="Camera" class="card-image">
+                    <div class="card-category">✨ Spoilers</div>
+                    <h3 class="card-title">สปอยโปรเจกต์ลับ #1 — ทำไมต้องทำ</h3>
+                    <p class="card-excerpt">
+                        ปีสุดท้ายของ ม.6 ไม่ได้มาพร้อมแค่ความเหนื่อย แต่มันมาพร้อม "บางอย่าง"
+                        ที่ผมรู้สึกว่าควรทำมากที่สุด...
+                    </p>
+                    <div class="card-meta">
+                        <span>📅 4 เม.ย. 2568</span>
+                    </div>
+                    <a href="post-spoiler-1.html" class="btn btn-secondary"
+                        style="margin-top: var(--spacing-md);">อ่านต่อ</a>
+                </article>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults"
+                style="display: none; text-align: center; padding: var(--spacing-3xl); color: var(--color-gray-medium);">
+                <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🔍</div>
+                <h3>ไม่พบบทความในหมวดหมู่นี้</h3>
+                <p>ลองเลือกหมวดหมู่อื่นดูสิครับ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar Categories (Desktop) -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-section">
+            <h3>หมวดหมู่</h3>
+            <ul class="category-list">
+                <li><a href="#" data-filter="behind-the-scenes">🎬 Behind the Scenes</a></li>
+                <li><a href="#" data-filter="diary">📝 Diary</a></li>
+                <li><a href="#" data-filter="equipment">📷 Equipment</a></li>
+                <li><a href="#" data-filter="spoilers">✨ Spoilers</a></li>
+                <li><a href="#" data-filter="teacher-talks">💬 Teacher Talks</a></li>
+                <li><a href="#" data-filter="video-project">🎥 Video Project</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>คลังบทความ</h3>
+            <ul class="archive-list">
+                <li><a href="archive.html?month=2025-11">พฤศจิกายน 2568</a></li>
+                <li><a href="archive.html?month=2025-10">ตุลาคม 2568</a></li>
+                <li><a href="archive.html?month=2025-09">กันยายน 2568</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>ค้นหา</h3>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ค้นหาบทความ..." class="search-input">
+                <button class="search-btn" id="searchBtn">🔍</button>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>แท็ก</h3>
+            <div class="tag-cloud">
+                <a href="#" class="tag">ม.6</a>
+                <a href="#" class="tag">โปรเจกต์</a>
+                <a href="#" class="tag">ภาพยนตร์</a>
+                <a href="#" class="tag">บันทึก</a>
+                <a href="#" class="tag">ครู</a>
+                <a href="#" class="tag">เพื่อน</a>
+                <a href="#" class="tag">ความทรงจำ</a>
+                <a href="#" class="tag">documentary</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>ก่อนชัตเตอร์สุดท้าย</h4>
+                    <p>เก็บทุกวินาทีที่น่าเสียดายถ้าปล่อยให้มันผ่านไป</p>
+                </div>
+                <div class="footer-section">
+                    <h4>เมนู</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">หน้าแรก</a></li>
+                        <li><a href="about.html">เกี่ยวกับ</a></li>
+                        <li><a href="blog.html">บทความ</a></li>
+                        <li><a href="project.html">โปรเจกต์</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>ติดต่อ</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/_thesilentwatcher_27/" target="_blank">📷 Instagram</a>
+                        </li>
+                        <li><a href="mailto:theeradet.detsungnoen@gmail.com">📧 Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2568 ก่อนชัตเตอร์สุดท้าย | สร้างด้วยความตั้งใจโดย ธีรเดช เดชสูงเนิน</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Category Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const posts = document.querySelectorAll('.card[data-category]');
+        const noResults = document.getElementById('noResults');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.dataset.category;
+
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter posts
+                let visibleCount = 0;
+                posts.forEach(post => {
+                    if (category === 'all' || post.dataset.category === category) {
+                        post.style.display = 'block';
+                        setTimeout(() => post.classList.add('visible'), 10);
+                        visibleCount++;
+                    } else {
+                        post.style.display = 'none';
+                    }
+                });
+
+                // Show/hide no results message
+                noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+            });
+        });
+
+        // Sidebar category links
+        document.querySelectorAll('.category-list a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const filter = link.dataset.filter;
+                const btn = document.querySelector(`.filter-btn[data-category="${filter}"]`);
+                if (btn) btn.click();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
